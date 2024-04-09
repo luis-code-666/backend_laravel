@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->max(400);
             $table->string('image_uri', 255)->nullable();
             $table->string('content_uri', 255);
-            $table->unsigneInteger('level_id');
+            $table->unsignedInteger('level_id');
             $table->timestamps();
             //foranea clave esto se coloca
             $table->foreign('level_id')->references('id')->on('levels')->onUpdate('cascade')->onDelete('cascade');

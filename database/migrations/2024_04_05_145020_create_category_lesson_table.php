@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('category_lesson', function (Blueprint $table) {
             $table->id();
-            //mantener relacion entre muchas y muchas 
-            $table->unsigneInteger('category_id');
-            $table->unsigneInteger('lesson_id');
+            //mantener relacion entre muchas y muchas
+            $table->unsignedInteger('category_id');
+            $table->unsignedInteger('lesson_id');
             $table->timestamps();
         });
     }
